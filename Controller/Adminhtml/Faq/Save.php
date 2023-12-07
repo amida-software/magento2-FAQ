@@ -108,11 +108,6 @@ class Save extends Faq
     {
         $groups = implode(',', $data['group']);
         $data['group'] = $groups;
-        $cGroup = $data['customer_group'];
-        if (isset($cGroup)) {
-            $customerGroup = implode(',', $data['customer_group']);
-            $data['customer_group'] = $customerGroup;
-        }
         $stores = $data['storeview'];
         if (isset($stores)) {
             $store = implode(',', $data['storeview']);

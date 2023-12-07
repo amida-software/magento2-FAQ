@@ -161,13 +161,6 @@ class Index extends Template implements BlockInterface
     {
         $collection->addFieldToFilter('status', 1);
         $collection->addFieldToFilter(
-            'customer_group',
-            [
-                ['null' => true],
-                ['finset' => $this->helper->getCustomerGroupId()]
-            ]
-        );
-        $collection->addFieldToFilter(
             'storeview',
             [
                 ['eq' => 0],
