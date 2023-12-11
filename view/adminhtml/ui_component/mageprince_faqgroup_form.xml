@@ -11,49 +11,49 @@
  */
 -->
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-	<argument name="data" xsi:type="array">
-		<item name="js_config" xsi:type="array">
-			<item name="provider" xsi:type="string">mageprince_faqgroup_form.faqgroup_form_data_source</item>
-			<item name="deps" xsi:type="string">mageprince_faqgroup_form.faqgroup_form_data_source</item>
-		</item>
-		<item name="label" translate="true" xsi:type="string">General Information</item>
-		<item name="config" xsi:type="array">
-			<item name="dataScope" xsi:type="string">data</item>
-			<item name="namespace" xsi:type="string">mageprince_faqgroup_form</item>
-		</item>
-		<item name="template" xsi:type="string">templates/form/collapsible</item>
-		<item name="buttons" xsi:type="array">
-			<item name="back" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\BackButton</item>
-			<item name="delete" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\DeleteButton</item>
-			<item name="save" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\SaveButton</item>
-			<item name="save_and_continue" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\SaveAndContinueButton</item>
-		</item>
-	</argument>
-	<dataSource name="faqgroup_form_data_source">
-		<argument name="dataProvider" xsi:type="configurableObject">
-			<argument name="class" xsi:type="string">Mageprince\Faq\Model\FaqGroup\DataProvider</argument>
-			<argument name="name" xsi:type="string">faqgroup_form_data_source</argument>
-			<argument name="primaryFieldName" xsi:type="string">faqgroup_id</argument>
-			<argument name="requestFieldName" xsi:type="string">faqgroup_id</argument>
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="submit_url" path="*/*/save" xsi:type="url"/>
-				</item>
-			</argument>
-		</argument>
-		<argument name="data" xsi:type="array">
-			<item name="js_config" xsi:type="array">
-				<item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
-			</item>
-		</argument>
-	</dataSource>
-	<fieldset name="General">
-		<argument name="data" xsi:type="array">
-			<item name="config" xsi:type="array">
-				<item name="label" xsi:type="string"/>
-			</item>
-		</argument>
-		<field name="status">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">mageprince_faqgroup_form.faqgroup_form_data_source</item>
+            <item name="deps" xsi:type="string">mageprince_faqgroup_form.faqgroup_form_data_source</item>
+        </item>
+        <item name="label" translate="true" xsi:type="string">General Information</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">mageprince_faqgroup_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\BackButton</item>
+            <item name="delete" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\DeleteButton</item>
+            <item name="save" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\SaveButton</item>
+            <item name="save_and_continue" xsi:type="string">Mageprince\Faq\Block\Adminhtml\FaqGroup\Edit\SaveAndContinueButton</item>
+        </item>
+    </argument>
+    <dataSource name="faqgroup_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Mageprince\Faq\Model\FaqGroup\DataProvider</argument>
+            <argument name="name" xsi:type="string">faqgroup_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">faqgroup_id</argument>
+            <argument name="requestFieldName" xsi:type="string">faqgroup_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" path="*/*/save" xsi:type="url"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="General">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string"/>
+            </item>
+        </argument>
+        <field name="status">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="sortOrder" xsi:type="number">10</item>
@@ -73,28 +73,28 @@
                 </item>
             </argument>
         </field>
-		<field name="groupname">
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="dataType" xsi:type="string">text</item>
-					<item name="label" translate="true" xsi:type="string">Group Name</item>
-					<item name="formElement" xsi:type="string">input</item>
-					<item name="source" xsi:type="string">FaqGroup</item>
-					<item name="sortOrder" xsi:type="number">20</item>
-					<item name="dataScope" xsi:type="string">groupname</item>
-					<item name="validation" xsi:type="array">
-						<item name="required-entry" xsi:type="boolean">true</item>
-					</item>
-				</item>
-			</argument>
-		</field>
-		<field name="icon">
+        <field name="groupname">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" translate="true" xsi:type="string">Group Name</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">FaqGroup</item>
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="dataScope" xsi:type="string">groupname</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="icon">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">string</item>
                     <item name="source" xsi:type="string">FaqGroup</item>
                     <item name="label" xsi:type="string" translate="true">Group Image/Icon</item>
-                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="visible" xsi:type="boolean">false</item> <!-- Изменено здесь -->
                     <item name="formElement" xsi:type="string">fileUploader</item>
                     <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
                     <item name="previewTmpl" xsi:type="string">Mageprince_Faq/image-preview</item>
@@ -107,36 +107,36 @@
             </argument>
         </field>
         <field name="sortorder">
-			<argument name="data" xsi:type="array">
-				<item name="config" xsi:type="array">
-					<item name="dataType" xsi:type="string">text</item>
-					<item name="label" translate="true" xsi:type="string">Sort Order</item>
-					<item name="formElement" xsi:type="string">input</item>
-					<item name="source" xsi:type="string">FaqGroup</item>
-					<item name="sortOrder" xsi:type="number">40</item>
-					<item name="dataScope" xsi:type="string">sortorder</item>
-					<item name="validation" xsi:type="array">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" translate="true" xsi:type="string">Sort Order</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">FaqGroup</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                    <item name="dataScope" xsi:type="string">sortorder</item>
+                    <item name="validation" xsi:type="array">
                         <item name="validate-number" xsi:type="boolean">true</item>
                     </item>
-				</item>
-			</argument>
-		</field>
-		<field name="storeview">
-		    <argument name="data" xsi:type="array">
-		        <item name="options" xsi:type="object">Magento\Store\Model\ResourceModel\Store\Collection</item>
-		        <item name="config" xsi:type="array">
+                </item>
+            </argument>
+        </field>
+        <field name="storeview">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Magento\Store\Model\ResourceModel\Store\Collection</item>
+                <item name="config" xsi:type="array">
                     <item name="sortOrder" xsi:type="number">50</item>
-		            <item name="dataType" xsi:type="string">text</item>
-		            <item name="label" xsi:type="string" translate="true">Store View</item>
-		            <item name="formElement" xsi:type="string">multiselect</item>
-		            <item name="source" xsi:type="string">popup</item>
-		            <item name="dataScope" xsi:type="string">storeview</item>
-		            <item name="default" xsi:type="string">0,1,2,3,4</item>
-		            <item name="validation" xsi:type="array">
-		                <item name="required-entry" xsi:type="boolean">true</item>
-		            </item>
-		        </item>
-		    </argument>
-		</field>
-	</fieldset>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Store View</item>
+                    <item name="formElement" xsi:type="string">multiselect</item>
+                    <item name="source" xsi:type="string">popup</item>
+                    <item name="dataScope" xsi:type="string">storeview</item>
+                    <item name="default" xsi:type="string">0,1,2,3,4</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
 </form>
